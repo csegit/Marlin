@@ -444,9 +444,10 @@
 //
 // Use Junction Deviation instead of traditional Jerk Limiting
 //
-#define JUNCTION_DEVIATION
+//cse: Generates massive stuttering with curvy and cylindrical paths
+//#define JUNCTION_DEVIATION
 #if ENABLED(JUNCTION_DEVIATION)
-  #define JUNCTION_DEVIATION_MM 0.02  // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.05  // (mm) Distance from real junction edge
 #endif
 
 /**
@@ -809,7 +810,9 @@
 #endif
 
 // Moves (or segments) with fewer steps than this will be joined with the next move
-#define MIN_STEPS_PER_SEGMENT 6
+// cse: experimental increase from default 6 to now 10 to reduce stutter
+// 10 steps are 0.1mm - should also be set in slicer
+#define MIN_STEPS_PER_SEGMENT 10
 
 /**
  * Minimum delay after setting the stepper DIR (in ns)
