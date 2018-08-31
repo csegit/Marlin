@@ -712,7 +712,10 @@
      * Set STATUS_EXPIRE_SECONDS to zero to never clear the status.
      * This will prevent position updates from being displayed.
      */
-    //#define LIGHTWEIGHT_UI
+    // cse-edit: Lightweight UI eingeschaltet, weil ich beim normalen GUI-Update
+    // Stottern in der Bewegung bemerkt habe. Das Stottern ist synchron mit dem
+    // grafischen Update des Lüfter-Icons.
+    #define LIGHTWEIGHT_UI
     #if ENABLED(LIGHTWEIGHT_UI)
       #define STATUS_EXPIRE_SECONDS 20
     #endif
