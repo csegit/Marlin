@@ -69,6 +69,13 @@
 // example_configurations/SCARA and customize for your machine.
 //
 
+//===========================================================================
+//============================= HANGPRINTER =================================
+//===========================================================================
+// For a Hangprinter start with the configuration file in the
+// example_configurations/hangprinter directory and customize for your machine.
+//
+
 // @section info
 
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
@@ -457,7 +464,7 @@
   #define DEFAULT_bedKp 420.21
   #define DEFAULT_bedKi 70.27
   #define DEFAULT_bedKd 628.21
-  
+
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
